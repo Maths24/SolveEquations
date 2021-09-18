@@ -1,0 +1,37 @@
+EQUATION CALCULATOR
+
+Aufgaben:
+
+~ Das Programm löst lineare und quadratische Gleichungen
+
+Diese Fähigkeiten hat das Programm
+
+Stand 11.07.2020
+
+- Aufbereitung der Nutzereingabe:
+
+    ~ Ziel der Aufbereitung ist es, die Nutzereingabe in eine einheitliche, leicht vom Algorithmus handlebare Form zu bringen.
+    ~ Der Nutzer kann einen beliebigen Variablennamen wählen. (void CustomVariables())
+    ~ Steht kein Faktor vor einem 'x^n' Ausdruck, so wird automatisch eine '1' hinzugefügt. (void HandleOnlyXs())
+    ~ Zur weiteren Verarbeitung werden alle als Rechenoperatoren dienenden Minuszeichen durch Pluszeichen ersetzt und die folgende Zahl wird mit "-1" mulitipliziert.
+    ~ Außerdem wird sichergestellt, dass vor und hinter jedem Pluszeichen sowie dem Gleichheitszeichen eine Leerstelle steht.
+    ~ Brüche mit einem 'x' im Zähler sowie Brüche ohne 'x' werden berechnet, z.B. 3x/6 -> 0.5x.
+
+- Umstellen der Gleichung:
+
+    ~ Ziel des Umstellungsprozesses ist die Ordnung der Gleichung so, dass alles mit 'x' links des Gleichheitszeichens steht und alles ohne 'x' rechts von diesem. Gleichzeitig wird die linke Seite noch so weit wie möglich vereinfacht.
+    ~ Zuerst werden die Summanden links des Gleichheitszeichens in einen eigenen std::vector geschrieben, das gleiche geschieht mit den Summanden der anderen Seite.
+    ~ Dann werden alle Zahlenwerte, die links des Gleichheitszeichens stehen, mit "-1" multipliziert und ebenso alle Summanden, die ein 'x' enthalten und rechts von diesem stehen.
+    ~ Nach dem Zusammenfassen der beiden std::vectoren werden nun gleichartige Summanden addiert und in einem std::vector gespeichert. (void SortAddends())
+    ~ Zum Schluss wird aus diesen Faktoren wieder der Eingabestring zusammengesetzt, der wie folgt aussieht: ax^n + bx^m + ... = y.(void rebuild())
+
+Lösung der Gleichung:
+
+    ~ Erst in diesem letzten Schritt wird nun die Gleichung gelöst.
+    ~ Dazu wird als erstes anhand des zuvor aufbereiteten Eingabestrings die Art der Gleichung ermittelt und auf Grundlage dessen die nötige Funktion aufgerufen.
+    ~ Zum Lösen quadratischer Gleichungen wird die Lösungformel angewendet. Lineare Gleichungen werden durch das Potenzieren der Zahl rechts des Gleichheitszeichen mit dem Quotienten aus 1 dividiert durch den Exponenten des x-Ausrucks der linken Seie der Gleichung
+        (Beispiel: x^3 = 8 => x = 8^(1/3) => x = 2).
+    ~ Zum Schluss wird das Ergebnis ausgegeben.
+
+
+

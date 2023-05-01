@@ -2,7 +2,7 @@ EQUATION CALCULATOR
 
 Aufgaben:
 
-~ Das Programm löst lineare und quadratische Gleichungen
+~ Das Programm löst polinomiale und quadratische Gleichungen
 
 Diese Fähigkeiten hat das Programm
 
@@ -29,7 +29,7 @@ Lösung der Gleichung:
 
     ~ Erst in diesem letzten Schritt wird nun die Gleichung gelöst.
     ~ Dazu wird als erstes anhand des zuvor aufbereiteten Eingabestrings die Art der Gleichung ermittelt und auf Grundlage dessen die nötige Funktion aufgerufen.
-    ~ Zum Lösen quadratischer Gleichungen wird die Lösungformel angewendet. Lineare Gleichungen werden durch das Potenzieren der Zahl rechts des Gleichheitszeichen mit dem Quotienten aus 1 dividiert durch den Exponenten des x-Ausrucks der linken Seie der Gleichung
+    ~ Zum Lösen quadratischer Gleichungen wird die Lösungformel angewendet. Nicht-quadratische Gleichungen werden durch das Potenzieren der Zahl rechts des Gleichheitszeichen mit dem Quotienten aus 1 dividiert durch den Exponenten des x-Ausrucks der linken Seie der Gleichung
         (Beispiel: x^3 = 8 => x = 8^(1/3) => x = 2).
     ~ Zum Schluss wird das Ergebnis ausgegeben.
 
